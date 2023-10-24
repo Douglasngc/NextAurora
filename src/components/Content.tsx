@@ -1,7 +1,9 @@
 interface ContentProps {
   title: string;
 }
-
+import { Pagination } from "./Pagination";
+import { EditIcon } from "./icons2/EditIcon";
+import { TrashIcon } from "./icons2/TrashIcon";
 export function Content(props: ContentProps) {
   return (
     <div className="mt-2">
@@ -17,19 +19,19 @@ export function Content(props: ContentProps) {
                       scope="col"
                       className="border-b border-gray-200 px-5 py-3 text-left text-sm font-normal uppercase"
                     >
-                      Role
+                      Empresas
                     </th>
                     <th
                       scope="col"
                       className="border-b border-gray-200 px-5 py-3 text-left text-sm font-normal uppercase"
                     >
-                      Created_at
+                      Código Externo
                     </th>
                     <th
                       scope="col"
                       className="border-b border-gray-200 px-5 py-3 text-left text-sm font-normal uppercase"
                     >
-                      status
+                     Ações
                     </th>
                     <th
                       scope="col"
@@ -57,9 +59,10 @@ export function Content(props: ContentProps) {
                     <td className="border-b border-gray-200 p-5 text-sm">
                       <a
                         href="#"
-                        className="text-indigo-600 hover:text-indigo-900"
+                        className="text-indigo-600 flex space-x-0 hover:text-indigo-900"
                       >
-                        Edit
+                        <EditIcon />
+                        <TrashIcon />
                       </a>
                     </td>
                   </tr>
@@ -82,9 +85,10 @@ export function Content(props: ContentProps) {
                     <td className="border-b border-gray-200 p-5 text-sm">
                       <a
                         href="#"
-                        className="text-indigo-600 hover:text-indigo-900"
+                        className="text-indigo-600 flex space-x-0 hover:text-indigo-900"
                       >
-                        Edit
+                        <EditIcon />
+                        <TrashIcon />
                       </a>
                     </td>
                   </tr>
@@ -106,9 +110,10 @@ export function Content(props: ContentProps) {
                     <td className="border-b border-gray-200 p-5 text-sm">
                       <a
                         href="#"
-                        className="text-indigo-600 hover:text-indigo-900"
+                        className="text-indigo-600 flex space-x-0 hover:text-indigo-900"
                       >
-                        Edit
+                        <EditIcon />
+                        <TrashIcon />
                       </a>
                     </td>
                   </tr>
@@ -130,9 +135,10 @@ export function Content(props: ContentProps) {
                     <td className="border-b border-gray-200 p-5 text-sm">
                       <a
                         href="#"
-                        className="text-indigo-600 hover:text-indigo-900"
+                        className="text-indigo-600 flex space-x-0 hover:text-indigo-900"
                       >
-                        Edit
+                        <EditIcon />
+                        <TrashIcon />
                       </a>
                     </td>
                   </tr>
@@ -154,9 +160,10 @@ export function Content(props: ContentProps) {
                     <td className="border-b border-gray-200 p-5 text-sm">
                       <a
                         href="#"
-                        className="text-indigo-600 hover:text-indigo-900"
+                        className="text-indigo-600 flex space-x-0 hover:text-indigo-900"
                       >
-                        Edit
+                        <EditIcon />
+                        <TrashIcon />
                       </a>
                     </td>
                   </tr>
@@ -178,9 +185,10 @@ export function Content(props: ContentProps) {
                     <td className="border-b border-gray-200 p-5 text-sm">
                       <a
                         href="#"
-                        className="text-indigo-600 hover:text-indigo-900"
+                        className="text-indigo-600 flex space-x-0 hover:text-indigo-900"
                       >
-                        Edit
+                        <EditIcon />
+                        <TrashIcon />
                       </a>
                     </td>
                   </tr>
@@ -202,9 +210,10 @@ export function Content(props: ContentProps) {
                     <td className="border-b border-gray-200 p-5 text-sm">
                       <a
                         href="#"
-                        className="text-indigo-600 hover:text-indigo-900"
+                        className="text-indigo-600 flex space-x-0 hover:text-indigo-900"
                       >
-                        Edit
+                        <EditIcon />
+                        <TrashIcon />
                       </a>
                     </td>
                   </tr>
@@ -226,72 +235,16 @@ export function Content(props: ContentProps) {
                     <td className="border-b border-gray-200 p-5 text-sm">
                       <a
                         href="#"
-                        className="text-indigo-600 hover:text-indigo-900"
+                        className="text-indigo-600 flex space-x-0 hover:text-indigo-900"
                       >
-                        Edit
+                        <EditIcon />
+                        <TrashIcon /> 
                       </a>
                     </td>
                   </tr>
                 </tbody>
               </table>
-              <div className="xs:flex-row xs:justify-between flex flex-col items-center p-5">
-                <div className="flex items-center">
-                  <button
-                    type="button"
-                    className="w-full rounded-l-xl border bg-white p-4 text-base text-gray-600 hover:bg-gray-100"
-                  >
-                    <svg
-                      width="9"
-                      fill="currentColor"
-                      height="8"
-                      className=""
-                      viewBox="0 0 1792 1792"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path d="M1427 301l-531 531 531 531q19 19 19 45t-19 45l-166 166q-19 19-45 19t-45-19l-742-742q-19-19-19-45t19-45l742-742q19-19 45-19t45 19l166 166q19 19 19 45t-19 45z" />
-                    </svg>
-                  </button>
-                  <button
-                    type="button"
-                    className="w-full border-y bg-white px-4 py-2 text-base text-indigo-500 hover:bg-gray-100"
-                  >
-                    1
-                  </button>
-                  <button
-                    type="button"
-                    className="w-full border bg-white px-4 py-2 text-base text-gray-600 hover:bg-gray-100"
-                  >
-                    2
-                  </button>
-                  <button
-                    type="button"
-                    className="w-full border-y bg-white px-4 py-2 text-base text-gray-600 hover:bg-gray-100"
-                  >
-                    3
-                  </button>
-                  <button
-                    type="button"
-                    className="w-full border bg-white px-4 py-2 text-base text-gray-600 hover:bg-gray-100"
-                  >
-                    4
-                  </button>
-                  <button
-                    type="button"
-                    className="w-full rounded-r-xl border-y border-r bg-white p-4  text-base text-gray-600 hover:bg-gray-100"
-                  >
-                    <svg
-                      width="9"
-                      fill="currentColor"
-                      height="8"
-                      className=""
-                      viewBox="0 0 1792 1792"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path d="M1363 877l-742 742q-19 19-45 19t-45-19l-166-166q-19-19-19-45t19-45l531-531-531-531q-19-19-19-45t19-45l166-166q19-19 45-19t45 19l742 742q19 19 19 45t-19 45z" />
-                    </svg>
-                  </button>
-                </div>
-              </div>
+             <Pagination />
             </div>
           </div>
         </div>

@@ -4,15 +4,15 @@ import { data } from "./data";
 
 const style = {
   title: "font-normal mx-4 text-sm",
-  active: "text-orange-600 font-medium",
+  active: "font-medium bg-white border-4 border-y-white border-r-white border-l-orange-600 text-orange-600",
   inactive: "text-black",
-  link: "flex font-thin items-center justify-start my-2 p-4 w-full",
+  link: "my-1 flex h-9 w-full items-center justify-start p-5 font-thin",
 };
 
 export function SidebarItems() {
   const { pathname } = useRouter();
   return (
-    <div>
+    <div >
       {data.map(({ section, content }) => (
         <ul className="border-b py-2 last:border-none" key={section}>
           {content.map((item) => (

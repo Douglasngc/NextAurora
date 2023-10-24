@@ -1,11 +1,15 @@
 import { DocIcon } from "./icons/DocIcon";
 import { HomeIcon } from "./icons/HomeIcon";
-import { TaskIcon } from "./icons/TaskIcon";
-import { ReportIcon } from "./icons/ReportIcon";
-import { ProjectIcon } from "./icons/ProjectIcon";
+import { EmpresasIcon } from "./icons/EmpresasIcon";
+import { CampIcon } from "./icons/CampIcon";
+import { AtendIcon } from "./icons/AtendIcon";
 import { SettingsIcon } from "./icons/SettingsIcon";
-import { CalendarIcon } from "./icons/CalendarIcon";
-import { TimeManageIcon } from "./icons/TimeManageIcon";
+import { ClienteIcon } from "./icons/ClienteIcon";
+import { TicketsIcon } from "./icons/TicketsIcon";
+import { QuaIcon } from "./icons/QuaIcon";
+import { ChaIcon } from "./icons/ChaIcon";
+import { RelatIcon } from "./icons/RelatIcon";
+
 
 export const data = [
   {
@@ -14,51 +18,51 @@ export const data = [
       {
         title: "Dashboard",
         icon: <HomeIcon />,
-        link: "/",
+        link: "/admin/Dash",
       },
       {
         title: "Atendimento",
-        icon: <ProjectIcon />,
-        link: "/admin/projects",
+        icon: <AtendIcon />,
+        link: "/admin/Atendimento",
       },
       {
         title: "Empresas",
-        icon: <TaskIcon />,
-        link: "/admin/tasks",
+        icon: <EmpresasIcon />,
+        link: "/admin/Empresas",
       },
       {
         title: "Clientes",
-        icon: <CalendarIcon />,
-        link: "/admin/calendar",
+        icon: <ClienteIcon />,
+        link: "/admin/Cientes",
       },
       {
         title: "Tickets",
-        icon: <TimeManageIcon />,
-        link: "/admin/time-manage",
+        icon: <TicketsIcon />,
+        link: "/admin/Tickets",
       },
       {
-        title: "Campanhas",
-        icon: <ReportIcon />,
-        link: "/admin/reports",
+        title: "Campanhas", 
+        icon: <CampIcon />,
+        link: "/admin/Campanhas",
       },
       {
         title: "Quadros",
-        icon: <SettingsIcon />,
-        link: "/admin/settings",
+        icon: <QuaIcon />,
+        link: "/admin/Quadros",
       },
       {
         title: "Chat interno",
-        icon: <SettingsIcon />,
-        link: "/admin/settings",
+        icon: <ChaIcon />,
+        link: "/admin/Chat",
       },
       {
         title: "Configurações",
         icon: <SettingsIcon />,
-        link: "/admin/settings",
+        link: "/admin/Config",
       },
       {
         title: "Relatórios",
-        icon: <SettingsIcon />,
+        icon: <RelatIcon />,
         link: "/admin/settings",
       },
       {

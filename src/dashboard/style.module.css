@@ -1,10 +1,16 @@
-.scrollbar::-webkit-scrollbar {
-  width: 0;
-  background: transparent; /* make scrollbar transparent */
+.scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent;
 }
 
-/* make scrollbar transparent on Firefox, IE and Edge*/
-.scrollbar {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
+.scrollbar::-webkit-scrollbar {
+  width: 0px;
+}
+
+.scrollbar::-webkit-scrollbar-thumb {
+  background-color: transparent;
+}
+
+.scrollbar::-webkit-scrollbar-track {
+  background-color: transparent;
 }
