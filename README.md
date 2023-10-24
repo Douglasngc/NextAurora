@@ -1,4 +1,4 @@
-# Salvia-kit Dashboard v9 Next.js
+# AuroraNext.js
 
 ![Salvia-kit Dashboard v9](https://www.salvia-kit.com/images/dashboards/dashv9.png)
 
