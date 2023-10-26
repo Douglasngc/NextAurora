@@ -1,62 +1,51 @@
-import React from "react";
+// DashboardProvider.tsx
+import React, { createContext, useContext, useState, useCallback, useEffect } from "react";
 import { useRouter } from "next/router";
+
 
 interface DashboardProviderProps {
   children: React.ReactNode;
 }
 
 interface ProviderValues {
-  sidebarOpen?: boolean;
-  openSidebar?: () => void;
-  closeSidebar?: () => void;
+  sidebarOpen: boolean;
+  toggleSidebar: () => void;
 }
 
-// create new context
-const Context = React.createContext<ProviderValues>({});
+const Context = createContext<ProviderValues>({
+  sidebarOpen: false,
+  toggleSidebar: () => {},
+});
 
 export function DashboardProvider({ children }: DashboardProviderProps) {
-  const [sidebarOpen, setSidebarOpen] = React.useState(false);
+  const [sidebarOpen, setSidebarOpen] = useState(false);
   const router = useRouter();
 
-  const openSidebar = React.useCallback(() => {
-    setSidebarOpen(true);
+  const toggleSidebar = useCallback(() => {
+    setSidebarOpen(prev => !prev);
   }, []);
 
-  const closeSidebar = React.useCallback(() => {
-    setSidebarOpen(false);
-  }, []);
+  useEffect(() => {
+    const handleRouteChange = () => {
+      if (sidebarOpen) {
+        setSidebarOpen(false);
+      }
+    };
 
-  // set the html tag overflow to hidden
-  React.useEffect(() => {
-    document.documentElement.style.overflow = "hidden";
-  }, []);
-
-  // close Sidebar on route changes when viewport is less than 1024px
-  React.useEffect(() => {
-    document.documentElement.style.overflow = "hidden";
-  }, []);
-
-  // close side navigation when route changes
-  React.useEffect(() => {
-    if (sidebarOpen) {
-      router.events.on("routeChangeStart", () => setSidebarOpen(false));
-    }
+    router.events.on("routeChangeStart", handleRouteChange);
 
     return () => {
-      if (sidebarOpen) {
-        router.events.off("routeChangeStart", () => setSidebarOpen(false));
-      }
+      router.events.off("routeChangeStart", handleRouteChange);
     };
   }, [sidebarOpen, router]);
 
   return (
-    <Context.Provider value={{ sidebarOpen, openSidebar, closeSidebar }}>
+    <Context.Provider value={{ sidebarOpen, toggleSidebar }}>
       {children}
     </Context.Provider>
   );
 }
 
-// custom hook to consume all context values { sidebarOpen, openSidebar, closeSidebar }
 export function useDashboardContext() {
-  return React.useContext(Context);
+  return useContext(Context);
 }

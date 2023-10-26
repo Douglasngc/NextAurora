@@ -1,10 +1,22 @@
+import React from "react";
 import { useDashboardContext } from "./Provider";
+import { Logos } from "./Logo";
+
+
+
 
 export function TopBar() {
-  const { openSidebar } = useDashboardContext();
+  
+  const { toggleSidebar } = useDashboardContext();
+
+  const handleToggleSidebar = () => {
+    toggleSidebar();
+  };
   return (
-    <header className="z-14 relative  w-screen bg-white shadow-lg h-14">
-      <div className="mx-34 h-14 w-full flex px-3">
+    // eslint-disable-next-line tailwindcss/no-custom-classname
+    <header className="z-14 relative  h-14 w-screen bg-white shadow-lg">
+      {/* // eslint-disable-next-line tailwindcss/no-custom-classname */}
+      <div className="mx-34 flex h-14 w-full px-3">
         <div className="relative flex w-full items-center pl-1 sm:ml-0 sm:pr-2">
           <div className="relative left-0 flex h-full w-full">
             <div className="group relative flex h-full w-12 items-center ">
@@ -13,27 +25,17 @@ export function TopBar() {
                 aria-expanded="false"
                 aria-label="Toggle sidenav"
                 className="text-4xl text-gray-500 focus:outline-none"
-                onClick={openSidebar}
+                onClick={handleToggleSidebar}
               >
                 &#8801;
               </button>
+              
             </div>
-            <div className="group relative flex h-full w-full items-center lg:w-64">
-              <div className="absolute flex h-10 w-auto cursor-pointer items-center justify-center p-3 pr-2 text-sm uppercase text-gray-500 sm:hidden">
-                <svg
-                  fill="none"
-                  className="relative h-5 w-5"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
-              </div>
+          <Logos />
+            <div className="group ml-60 relative flex h-full w-full items-center lg:w-64">
+              
               <svg
-                className="pointer-events-none absolute left-0 ml-4 hidden h-4 w-4 fill-current text-gray-500 group-hover:text-gray-400 sm:block"
+                className="pointer-events-none absolute left-0 ml-4   h-4 w-4 fill-current text-black sm:block"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 20 20"
               >
@@ -41,18 +43,43 @@ export function TopBar() {
               </svg>
               <input
                 type="text"
-                className="block w-full rounded-2xl bg-gray-100 py-1.5 pl-10 pr-4 leading-normal text-gray-400 opacity-90 focus:border-transparent focus:outline-none focus:ring-2 focus:ring-blue-500"
-                placeholder="Search"
+                className="block w-full rounded-2xl bg-gray-100 py-1.5 pl-10 pr-4 leading-normal text-black opacity-90 focus:border-transparent focus:outline-none focus:ring-2 focus:ring-blue-500"
+                placeholder="Pesquisar"
               />
-              <div className="absolute right-0 mr-2 hidden h-auto rounded-2xl border border-gray-300 px-2 py-1 text-xs text-gray-400 md:block">
-                +
-              </div>
-            </div>
-          </div>
-          <div className="relative ml-5 flex w-1/4 items-center justify-end p-1 sm:right-auto sm:mr-0">
-            <a href="#" className="relative block">
              
-            </a>
+            </div>
+           
+          </div>
+          <div className="mr-3 relative flex space-x-4 items-center">
+          <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          className="w-6 h-6"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0"
+          />
+        </svg>
+        
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          className="w-6 h-6"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z"
+          />
+        </svg>
           </div>
         </div>
       </div>

@@ -1,7 +1,7 @@
 export function Pagination() {
     return (
 <div className="xs:flex-row xs:justify-between flex flex-col items-center p-5">
-<div className="flex items-center">
+<div className="flex items-center space-x-2">
   <button
     type="button"
     className="w-full rounded-l-xl border bg-white p-4 text-base text-gray-600 hover:bg-gray-100"
@@ -19,25 +19,25 @@ export function Pagination() {
   </button>
   <button
     type="button"
-    className="w-full border-y bg-white px-4 py-2 text-base text-indigo-500 hover:bg-gray-100"
+    className="px-4 py-2 rounded-lg text-black bg-gray-200 hover:bg-orange-600 hover:text-white transition-colors"
   >
     1
   </button>
   <button
     type="button"
-    className="w-full border bg-white px-4 py-2 text-base text-gray-600 hover:bg-gray-100"
+    className="px-4 py-2 rounded-lg text-black bg-gray-200 hover:bg-orange-600 hover:text-white transition-colors"
   >
     2
   </button>
   <button
     type="button"
-    className="w-full border-y bg-white px-4 py-2 text-base text-gray-600 hover:bg-gray-100"
+    className="px-4 py-2 rounded-lg text-black bg-gray-200 hover:bg-orange-600 hover:text-white transition-colors"
   >
     3
   </button>
   <button
     type="button"
-    className="w-full border bg-white px-4 py-2 text-base text-gray-600 hover:bg-gray-100"
+    className="px-4 py-2 rounded-lg text-black bg-gray-200 hover:bg-orange-600 hover:text-white transition-colors"
   >
     4
   </button>
