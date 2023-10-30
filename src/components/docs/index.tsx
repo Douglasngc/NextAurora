@@ -4,35 +4,14 @@ import { FileIcon, FolderIcon, JSXIcon } from "./Icons";
 export function Docs() {
   return (
     <div className="max-w-full py-8 text-black">
-      <h2 className="mb-10 text-3xl font-medium">Documentation</h2>
-      <section
-        className="mb-16 px-3 py-8 md:px-8"
-        style={{ backgroundColor: "rgb(146 151 179 / 13%)" }}
-      >
-        <h2 className="text-2xl font-medium">Features</h2>
-        <ul className="mt-4 list-disc pl-6">
-          <li className="mb-4">
-            Support of the active route (styled by default).
-          </li>
-          <li className="mb-4">
-            Fully customizable and without external dependencies.
-          </li>
-          <li className="mb-4">
-            No vendor lock-in, you can export it and integrate it in your
-            project.
-          </li>
-          <li>
-            Sidebar can be aligned left or right according to your preferences
-            (on mobile).
-          </li>
-        </ul>
-      </section>
+      <h2 className="mb-10 text-3xl font-medium">Documentação</h2>
+     
 
       <section
         className="mb-16 px-3 py-8 md:px-8"
         style={{ backgroundColor: "rgb(146 151 179 / 13%)" }}
       >
-        <h2 className="mb-3 text-2xl font-medium">File Structure</h2>
+        <h2 className="mb-3 text-2xl font-medium">Estrutura de arquivos</h2>
         <div className="pl-2">
           <div className="mb-3 flex pl-5">
             <FolderIcon className="h-6 w-6" />
@@ -54,10 +33,7 @@ export function Docs() {
             <JSXIcon />
             <span className="pl-2">Sidebar.tsx</span>
           </div>
-          <div className="mb-3 flex pl-16">
-            <JSXIcon />
-            <span className="pl-2">SidebarHeader.tsx</span>
-          </div>
+          
           <div className="mb-3 flex pl-16">
             <JSXIcon />
             <span className="pl-2">SidebarItems.tsx</span>
@@ -66,10 +42,7 @@ export function Docs() {
             <JSXIcon />
             <span className="pl-2">Layout.tsx</span>
           </div>
-          <div className="mb-3 flex pl-11">
-            <JSXIcon />
-            <span className="pl-2">Overlay.tsx</span>
-          </div>
+         
           <div className="mb-3 flex pl-11">
             <JSXIcon />
             <span className="pl-2">Provider.tsx</span>
@@ -89,7 +62,7 @@ export function Docs() {
         className="mb-16 px-3 py-8 md:px-8"
         style={{ backgroundColor: "rgb(146 151 179 / 13%)" }}
       >
-        <h2 className="text-2xl font-medium">File Structure explained</h2>
+        <h2 className="text-2xl font-medium">Estrutura de pastas</h2>
 
         <div className="mb-8 mt-4">
           <div className="flex">
@@ -98,16 +71,12 @@ export function Docs() {
           <div className="mt-4 flex flex-wrap pl-6 md:flex-nowrap">
             <FolderIcon className="h-7 w-7" />
             <span className="px-2 font-medium">icons</span> :
-            <p className="pl-1">
-              Icons used for each sidebar-item. You don't need this folder if
-              you can provide your own icons.
-            </p>
+            
           </div>
           <div className="mt-6 flex flex-wrap pl-6 md:flex-nowrap">
             <JSXIcon /> <span className="px-2 font-medium">data.tsx</span> :
             <p className="pl-1">
-              It's in this file that you will add routes for each sidebar-item.
-              it is an array of objects.
+              Arquivo para listar e linkar os icones da sidebar as devidas rotas
             </p>
           </div>
           <div className="mt-8 flex flex-wrap pl-8">
@@ -116,39 +85,32 @@ export function Docs() {
             </div>
             <ul className="pt-8 md:pl-4 md:pt-20">
               <li className="mb-2">
-                <span className="px-1">section :</span> Name of the section
+                <span className="px-1">section :</span> Nome da seção (caso adicione mais seções aparecerá um divider  )
               </li>
               <li className="mb-2">
-                <span className="px-1">title :</span> Label for the route
+                <span className="px-1">title :</span> Nome da label
               </li>
               <li className="mb-2">
-                <span className="px-1">icon :</span> icon used, imported from
-                <strong className="px-1">icons</strong> folder or from your
-                library
+                <span className="px-1">icon :</span> icone usado
+                <strong className="px-1">icons</strong> pasta de origem do icone
+                
               </li>
             </ul>
           </div>
           <div className="mt-10 flex flex-wrap pl-6 md:flex-nowrap">
             <JSXIcon /> <span className="px-2 font-medium">Sidebar.tsx</span> :
-            <p className="pl-1">responsable of the sidebar.</p>
+            <p className="pl-1">Base da sidebar.</p>
             <p className="pl-1">
-              compose <strong>SidebarHeader</strong> and{" "}
+              contém <strong>SidebarHeader</strong> e{" "}
               <strong>SidebarItems</strong> components.
             </p>
           </div>
-          <div className="mt-6 flex flex-wrap pl-6 md:flex-nowrap">
-            <JSXIcon />{" "}
-            <span className="px-2 font-medium">SidebarHeader.tsx</span> :
-            <p className="pl-1">
-              contains the logo displayed on top of the sidebar
-            </p>
-          </div>
+          
           <div className="mt-6 flex flex-wrap pl-6 md:flex-nowrap">
             <JSXIcon />{" "}
             <span className="px-2 font-medium">SidebarItems.tsx</span> :
             <p className="pl-1">
-              automatically generates each sidebar-item according to your routes
-              defined in
+              Gera os items da sidebar,linkando as rotas
               <strong className="px-1">data.tsx</strong>
             </p>
           </div>
@@ -157,36 +119,26 @@ export function Docs() {
         <div>
           <div className="mt-8 flex flex-wrap md:flex-nowrap">
             <JSXIcon /> <span className="px-1 font-medium">Layout.tsx :</span>{" "}
-            contains the
+            contém o 
             <strong className="px-1">DashboardLayout</strong>
-            component used as the layout of the application
+           mostra o layout da página
           </div>
         </div>
 
-        <div>
-          <div className="mt-8 flex flex-wrap md:flex-nowrap">
-            <JSXIcon /> <span className="px-1 font-medium">Overlay.tsx :</span>{" "}
-            displays an overlay that will only be visible on small screens to
-            emphasize the focus on sidebar when it is open. it's also used to
-            close sidebar on click outside
-          </div>
-        </div>
+       
 
         <div>
           <div className="mt-8 flex flex-wrap md:flex-nowrap">
             <JSXIcon /> <span className="px-1 font-medium">Provider.tsx :</span>{" "}
-            contains the <strong className="px-1">DashboardProvider</strong>{" "}
-            component where all the dashboard logic is placed. this will then be
-            reused in other components. it handles opening and closing of the
-            sidebar.
+            contém <strong className="px-1">DashboardProvider</strong>{" "}
+            Componente onde fica a lógica do app
           </div>
         </div>
 
         <div>
           <div className="mt-8 flex flex-wrap md:flex-nowrap">
             <JSXIcon /> <span className="px-1 font-medium">TopBar.tsx :</span>
-            You can customize it or replace it with your own TopBar but don't
-            forget to add a button to toggle sidebar on mobile
+            Falta fazer o togglebutton
           </div>
         </div>
 
@@ -194,8 +146,7 @@ export function Docs() {
           <FileIcon className="h-5 w-5  md:h-7" />
           <span className="px-1 font-medium">style.module.css</span> :
           <p className="pl-1">
-            This style sheet is used to make the scrollbar invisible for the
-            sidebar and to apply some filters.
+            deixei a scroball invisivel aq
           </p>
         </div>
       </section>
